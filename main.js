@@ -67,7 +67,7 @@ function game() {
     // Loop through 5 games and add scores
     for (let i = 0; i < 5; i++) {
         // Prompt user to make player choice
-        let playerChoice = (prompt('Choose Rock, Paper, or Scissors')).toLowerCase();
+        // let playerChoice = (prompt('Choose Rock, Paper, or Scissors')).toLowerCase();
         // Call getComputerChoice function to get computer choice
         let computerChoice = getComputerChoice();
 
