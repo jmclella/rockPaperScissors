@@ -23,7 +23,7 @@ body {
     margin-top: 50px;
 }
 
-.select {
+#select {
     width: 250px;
     height: 250px;
     padding: 0px;
@@ -33,7 +33,7 @@ body {
     color: #e7eaf6;
 }
 
-.select:hover {
+#select:hover {
     opacity: .75;
     cursor: pointer;
 }
