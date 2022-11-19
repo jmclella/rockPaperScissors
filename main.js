@@ -20,7 +20,11 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerChoice = (button.parentElement.getAttribute('class'));
         computerChoice = getComputerChoice();
-        playRound(playerChoice, computerChoice);
+        result = playRound(playerChoice, computerChoice);
+        checkResult(result);
+        document.getElementById('player-score').textContent = playerScoreString;
+        document.getElementById('computer-score').textContent = computerScoreString;
+        console.log(playerScore, computerScore);
     })
 })
 
@@ -30,6 +34,25 @@ playerScore = parseInt(playerScore);
 let computerScoreContainer = document.querySelector('#computer-score');
 let computerScore = playerScoreContainer.textContent;
 computerScore = parseInt(computerScore);
+
+playerScoreString = playerScore.toString();
+computerScoreString = computerScore.toString();
+
+// resultChecker Function
+function checkResult(result) {
+    if (result === 'tie') {
+        return;
+    } else if (result === 'win') {
+        playerScore += 1;
+        playerScoreString = playerScore.toString();
+        computerScoreString = computerScore.toString();
+    } else if (result === 'lose') {
+        computerScore += 1;
+        playerScoreString = playerScore.toString();
+        computerScoreString = computerScore.toString();
+    }
+}
+
 
 // Create playRound function with (playerChoice, computerChoice) parameters
 
