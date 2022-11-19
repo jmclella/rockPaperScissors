@@ -1,5 +1,13 @@
 html {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #a2a8d3;
 }
 
 *,
@@ -7,3 +15,71 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.select {
+    width: 250px;
+    height: 250px;
+    padding: 0px;
+    border: 3px solid #e7eaf6;
+    border-radius: 1em;
+    background-color: #113f67;
+    color: #e7eaf6;
+}
+
+.select:hover {
+    opacity: .75;
+    cursor: pointer;
+}
+
+header {
+    background-color:#113f67;
+    height: 150px;
+}
+
+h1 {
+    margin-top: 0px;
+    padding: 50px;
+    font-size: 48px;
+    color: #e7eaf6;
+    text-align: center;
+}
+
+.player-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 75px;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+}
+
+.player-container,
+.computer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 3px solid #113f67;
+    border-radius: 10px;
+}
+
+h2, h3 {
+    margin: 0px;
+    padding: 6px;
+}
+
