@@ -21,7 +21,7 @@ buttons.forEach((button) => {
         playerChoice = (button.parentElement.getAttribute('class'));
         computerChoice = getComputerChoice();
         result = playRound(playerChoice, computerChoice);
-        checkResult(result);
+        checkResult(result, playerScore, computerScore);
         document.getElementById('player-score').textContent = playerScoreString;
         document.getElementById('computer-score').textContent = computerScoreString;
         console.log(playerScore, computerScore);
@@ -37,6 +37,24 @@ computerScore = parseInt(computerScore);
 
 playerScoreString = playerScore.toString();
 computerScoreString = computerScore.toString();
+
+function checkWinner(playerScore, computerScore) {
+    if (playerScore >= 5 || computerScore >= 5) {
+        if (playerScore === 5) {
+            alert('Player wins!')
+            playerScore = 0;
+            computerScore = 0;
+            return playerScore, computerScore;
+        }
+        else if (computerScore === 5) {
+            alert('Computer wins!')
+            playerScore = 0;
+            computerScore = 0;
+            return playerScore, computerScore;
+        }
+    }
+}
+    
 
 // resultChecker Function
 function checkResult(result) {
